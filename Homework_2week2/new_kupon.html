@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://demo.open-eshop.com/" />
+<title>new_kupon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">new_kupon</td></tr>
+</thead><tbody>
+<tr>
+	<td>store</td>
+	<td>kupon1</td>
+	<td>kupon_name</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/oc-panel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=eShop</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='collapseOne']/div/table/tbody/tr[4]/td/li/a/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='content']/a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=form.form.form-horizontal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=formorm_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=formorm_name</td>
+	<td>${kupon_name}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=formorm_discount_amount</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=formorm_number_coupons</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=formorm[valid_date]</td>
+	<td>2015-11-03</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=formorm[submit]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>name=name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[2]/div[4]/div/div/table/tbody/tr/td</td>
+	<td>${kupon_name}</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Delete All</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
